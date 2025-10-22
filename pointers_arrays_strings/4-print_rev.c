@@ -6,13 +6,15 @@
  */
 void print_rev(char *str)
 {
-	int len = 0, index;
+    int len = 0, index;
 
-	while (str[index++])
-		len++;
+    // Start index from 0
+    for (index = 0; str[index] != '\0'; index++)
+        len++;
 
-	for (index = len - 1; index >= 0; index--)
-		_putchar(str[index]);
+    // Print characters in reverse
+    for (index = len - 1; index >= 0; index--)
+        _putchar(str[index]);
 
-	_putchar('\n');
+    _putchar('\n');
 }
